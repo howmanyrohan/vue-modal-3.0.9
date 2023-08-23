@@ -57,7 +57,7 @@
             </div>
           </slot>
         </div>
-        <div v-if="draggable" v-drag ref="vm" class="vm" :data-vm-id="id" :class="modalClass" :style="modalStyle">
+        <div v-if="draggable" v-drag="{ handle: '.vm-titlebar' }" ref="vm" class="vm" :data-vm-id="id" :class="modalClass" :style="modalStyle">
           <slot name="titlebar">
             <div class="vm-titlebar">
               <h3 :id="`${id}-title`" class="vm-title">
